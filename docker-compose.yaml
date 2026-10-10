@@ -1,0 +1,13 @@
+networks:
+  default:
+    driver: bridge
+    name: expense
+    external: false
+volumes:
+  mysql:
+services:
+    mysql:
+    image: viswanadhammanchem/mysql
+    container_name: mysql
+    volumes:
+    - mysql:/var/lib/mysql
