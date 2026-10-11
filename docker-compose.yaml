@@ -7,7 +7,7 @@ volumes:
   mysql:
 services:
     mysql:
-    image: viswanadhammanchem/emysql:v1
-    container_name: emysql
-    volumes:
-    - mysql:/var/lib/mysql
+      image: viswanadhammanchem/emysql:v1
+      container_name: emysql
+      volumes:
+      - mysql:/var/lib/mysql
