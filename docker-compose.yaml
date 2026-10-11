@@ -11,3 +11,9 @@ services:
       container_name: emysql
       volumes:
       - mysql:/var/lib/mysql
+
+    backend:
+      image: viswanadhammanchem/backend:v1
+      container_name: backend
+      depends_on:
+        - emysql
