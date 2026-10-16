@@ -12,14 +12,14 @@ services:
     volumes:
     - mysql:/var/lib/mysql
 
-  # backend:
-  #  image: viswanadhammanchem/backend:v1
-  #  container_name: backend
-  #  depends_on:
-  #   - mysql
+  backend:
+   image: viswanadhammanchem/backend:v1
+   container_name: backend
+   depends_on:
+    - mysql
 
-  # frontend:
-  #  image: viswanadhammanchem/frontend:v1
-  #  container_name: frontend
-  #  depends_on:
-  #   - backend
+  frontend:
+   image: viswanadhammanchem/frontend:v1
+   container_name: frontend
+   depends_on:
+    - backend
